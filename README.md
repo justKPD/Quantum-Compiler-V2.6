@@ -1,6 +1,4 @@
-***
 
-```markdown
 # Quantum Compiler v2.6.0 — The Quantum Brain 🧠⚛️
 
 > **The first end-to-end interface bridging natural language directly to quantum computation and back.**
@@ -31,59 +29,6 @@ We are entering the NISQ (Noisy Intermediate-Scale Quantum) era. This project pr
 
 The core 9-step execution pipeline is wrapped in rigorous pre-processing, routing, and post-execution validation layers designed to eliminate AI hallucination and detect hardware noise.
 
-```mermaid
-graph TD
-    classDef core fill:#0B0F19,stroke:#00F0FF,stroke-width:2px,color:#E2E8F0;
-    classDef new fill:#111827,stroke:#BD00FF,stroke-width:2px,color:#E2E8F0,stroke-dasharray: 5 5;
-    classDef hardware fill:#1E293B,stroke:#00FF9D,stroke-width:2px,color:#E2E8F0;
-    classDef output fill:#000000,stroke:#00FF9D,stroke-width:2px,color:#00FF9D;
-
-    Input([1. User Query in Plain English]) ::: core --> PreProc
-    
-    subgraph PreProcessing [PRE-PROCESSING LAYERS]
-        class PreProcessing fill:#111827,stroke:#BD00FF,stroke-width:2px,color:#E2E8F0;
-        CompoundPlanner[Compound Query Planner] ::: new
-        Decomp[Challenge Decomposition] ::: new
-    end
-    
-    Input --> PreProcessing
-    PreProcessing --> Step2[2. Interview & Variable Gathering] ::: core
-    Step2 --> Step3[3. Translate to Math Engine & Infer Size] ::: core
-    Step3 --> AdvRouter{Advantage Router} ::: new
-    
-    AdvRouter -->|Classical is Better| ClassVerdict[Honest Verdict: Use Classical] ::: new
-    AdvRouter -->|Quantum Warranted| Step4[4. Deterministic Kernels Build Circuit] ::: core
-    
-    Step4 --> Step5[5. Display Quantum Circuit] ::: core
-    Step5 --> HardwareToggle{Hardware Checkbox Arbiter} ::: hardware
-    
-    HardwareToggle -->|Checked = True| QPU[6a. Run on Physical IBM QPU] ::: hardware
-    HardwareToggle -->|Checked = False| Sim[6b. Run on Statevector Simulator] ::: hardware
-    
-    QPU --> Step7[7. Measurement Statistics] ::: core
-    Sim --> Step7
-    
-    Step7 --> PostExec
-    
-    subgraph PostValidation [POST-EXECUTION VALIDATION]
-        class PostValidation fill:#111827,stroke:#BD00FF,stroke-width:2px,color:#E2E8F0;
-        NISQPreview[NISQ Preview] ::: new
-        NoiseVal[Noise Stability Validation] ::: new
-    end
-    
-    Step7 --> PostValidation
-    PostValidation --> Step8[8. Decode Measurement to Answer] ::: core
-    Step8 --> Step9[9. Verify Conclusion] ::: core
-    
-    Step9 --> ConfidenceCheck{Confidence High?} ::: new
-    
-    ConfidenceCheck -->|Yes| FinalOutput([Final Output to User]) ::: output
-    ConfidenceCheck -->|No - Low Confidence| SelfCorrect[Self-Correction Loop] ::: new
-    
-    SelfCorrect -.->|Re-synthesize Circuit| Step3
-```
-
----
 
 ### 🏗️ Engine Layout & Module Architecture
 
