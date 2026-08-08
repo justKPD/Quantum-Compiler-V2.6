@@ -1,5 +1,5 @@
 
-# Quantum Compiler v2.6.0 with Agentic Neuro-Symbolic Pipeline — The Quantum Brain 🧠⚛️
+# Quantum Compiler v2.6.0 with Agentic Neuro-Symbolic Pipeline: The Quantum Brain 🧠⚛️
 
 > **The first end-to-end interface bridging natural language directly to quantum computation and back.**
 
