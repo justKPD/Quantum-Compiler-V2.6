@@ -1,14 +1,11 @@
 
-# Quantum Compiler v2.6.0 — The Quantum Brain 🧠⚛️
+# Quantum Compiler v2.6.0 with Agentic Neuro-Symbolic Pipeline — The Quantum Brain 🧠⚛️
 
 > **The first end-to-end interface bridging natural language directly to quantum computation and back.**
 
 Describe your problem in plain English. The Quantum Brain translates it into a real quantum algorithm, runs it on a simulator or physical IBM Quantum hardware, mathematically verifies the result, and translates the noisy quantum measurements back into a human answer.
 
-**Live Demo:** [https://quantum-brain-studio.onrender.com](https://quantum-brain-studio.onrender.com)
-
-![Quantum Compiler UI](UI_Screenshot.png) 
-*(Note: Upload your downloaded image to the GitHub repo and name it `UI_Screenshot.png` for this to show up perfectly)*
+**Live preview** [https://quantum-brain-studio.onrender.com](https://quantum-brain-studio.onrender.com)
 
 ---
 
