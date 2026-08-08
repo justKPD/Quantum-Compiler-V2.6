@@ -25,6 +25,7 @@ We are entering the NISQ (Noisy Intermediate-Scale Quantum) era. This project pr
 ### ⚛️ System Architecture & Pipeline
 
 The core 9-step execution pipeline is wrapped in rigorous pre-processing, routing, and post-execution validation layers designed to eliminate AI hallucination and detect hardware noise.
+
 <svg viewBox="0 0 1050 1360" xmlns="http://www.w3.org/2000/svg" width="1050" height="1360">
   <defs>
     <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
